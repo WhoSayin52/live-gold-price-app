@@ -56,7 +56,7 @@ export async function serveStatic(res, queryPath) {
 	}
 }
 
-let goldVal = 4198.32
+export let goldVal = 4198.32
 
 function getRandomGoldValue() {
 	goldVal += (Math.random() * 10 - Math.random() * 10);
@@ -78,6 +78,5 @@ export function livePrice(res) {
 	}, 5000)
 }
 
-export function buyHandler(price){
 
-}
+

@@ -13,9 +13,6 @@ const server = http.createServer((req, res) => {
 	if (urlQuery === '/live') {
 		util.livePrice(res)
 	}
-	else if (path === '/buy') {
-
-	}
 	else {
 		util.serveStatic(res, urlQuery)
 	}
