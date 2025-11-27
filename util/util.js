@@ -78,5 +78,23 @@ export function livePrice(res) {
 	}, 5000)
 }
 
+export function handleBuyRequest(req, res, callback) {
+    let body = '';
 
+    req.on('data', chunk => {
+        body += chunk.toString();
+    });
 
+    req.on('end', () => {
+        try {
+            const data = JSON.parse(body); 
+            callback(data); 
+
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ status: 'ok' }));
+        } catch (err) {
+            res.writeHead(400, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ status: 'error', message: err.message }));
+        }
+    });
+}

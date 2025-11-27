@@ -13,6 +13,11 @@ const server = http.createServer((req, res) => {
 	if (urlQuery === '/live') {
 		util.livePrice(res)
 	}
+	else if (urlQuery === '/purchase' && method === 'POST') {
+		util.handleBuyRequest(req, res, (purchase) => {
+			console.log('Purchase received:', purchase);
+		});
+	}
 	else {
 		util.serveStatic(res, urlQuery)
 	}
