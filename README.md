@@ -7,8 +7,9 @@
 
 ## Description
 
-A simple server with a simple client interface that **updates simulated gold prices every 5 seconds**.  
-Gold prices are simulated because most APIs update slowly; this way, you can see the server-client interaction in real time.
+Built a real-time client–server system where the **server emits updated gold prices every 5 seconds using simulated market data**.
+
+Gold prices are simulated because live APIs updates are slow (At best every 10min); this way, you can see the server-client interaction in real time.
 
 ### Frontend
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
